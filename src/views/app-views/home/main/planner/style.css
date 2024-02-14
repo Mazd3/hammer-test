@@ -1,0 +1,45 @@
+.planner_draw-container {
+  background-color: white;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.planner_image {
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+.planner {
+  display: flex;
+  gap: 16px;
+}
+
+.planner_coordinates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.planner_coordinates-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: white;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.planner_coordinate-item {
+  width: 100px;
+}
+
+.planner_import-export {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+}

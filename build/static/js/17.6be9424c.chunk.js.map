@@ -1,0 +1,1 @@
+{"version":3,"sources":["views/app-views/home/index.js"],"names":["Home","_jsx","children"],"mappings":"mGAAA,uBAMeA,UAJFA,IACJC,cAAA,OAAAC,SAAK,yB","file":"static/js/17.6be9424c.chunk.js","sourcesContent":["import React from \"react\";\r\n\r\nconst Home = () => {\r\n  return <div>Home component works!</div>;\r\n};\r\n\r\nexport default Home;\r\n"],"sourceRoot":""}
