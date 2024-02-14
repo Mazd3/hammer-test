@@ -1,8 +1,12 @@
+.planner {
+  display: flex;
+  gap: 16px;
+}
+
 .planner_draw-container {
-  background-color: white;
   position: relative;
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
@@ -14,7 +18,7 @@
   height: 100px;
 }
 
-.planner {
+.planner_entities {
   display: flex;
   gap: 16px;
 }
@@ -30,8 +34,6 @@
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  background-color: white;
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
 .planner_coordinate-item {

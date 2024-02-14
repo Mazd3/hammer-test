@@ -67,7 +67,7 @@ const DrawComponent = () => {
   return (
     <div className="planner">
       <div className="planner_controls">
-        <Flex>
+        <Flex className="planner_entities">
           {ENTITIES.map((entity) => (
             <Card key={entity.id}>
               <Flex flexDirection="column">
@@ -87,25 +87,25 @@ const DrawComponent = () => {
 
         <div className="planner_coordinates-list">
           {elements.map((element, index) => (
-            <div
+            <Card
               key={index}
               onClick={() => setSelected(index)}
-              className="planner_coordinates-item"
               style={{
-                border:
-                  index === selected ? "1px solid gray" : "1px solid white",
+                border: index === selected ? "1px solid gray" : "none",
               }}
             >
-              <div className="planner_coordinate-item">x: {element.x}</div>
-              <div className="planner_coordinate-item">y: {element.y}</div>
-              <Button
-                onClick={() =>
-                  setElements(elements.filter((_, i) => i !== index))
-                }
-              >
-                Удалить
-              </Button>
-            </div>
+              <div className="planner_coordinates-item">
+                <div className="planner_coordinate-item">x: {element.x}</div>
+                <div className="planner_coordinate-item">y: {element.y}</div>
+                <Button
+                  onClick={() =>
+                    setElements(elements.filter((_, i) => i !== index))
+                  }
+                >
+                  Удалить
+                </Button>
+              </div>
+            </Card>
           ))}
         </div>
         <div className="planner_import-export">
@@ -142,7 +142,7 @@ const DrawComponent = () => {
         </div>
       </div>
 
-      <div ref={ref} className="planner_draw-container">
+      <Card ref={ref} className="planner_draw-container">
         {elements.map((element, index) => (
           <img
             draggable={false}
@@ -154,7 +154,7 @@ const DrawComponent = () => {
             style={{
               left: element.x,
               top: element.y,
-              backgroundColor: index === selected ? "gray" : "white",
+              border: index === selected ? "1px solid gray" : "none",
             }}
             onMouseDown={() => {
               setTarget(index);
@@ -163,7 +163,7 @@ const DrawComponent = () => {
             onMouseUp={() => setTarget(null)}
           />
         ))}
-      </div>
+      </Card>
     </div>
   );
 };
